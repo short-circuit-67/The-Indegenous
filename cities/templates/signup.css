@@ -1,0 +1,51 @@
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-self: flex-start;
+    resize: vertical;
+  }
+  
+  *{
+    font-size: 30px;
+  }
+body{
+  /* font-size: 25px; */
+  background-image: url('x1.jpg');
+  background-size: 100%;
+  background-repeat: repeat;
+  text-align: center;
+}
+
+  label {
+    padding: 6px 6px 6px 0;
+    display: block;
+    align-self: flex-start;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+
+  #btn{
+    width: 20%
+
+  }
+
+  #cssform{
+    
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  

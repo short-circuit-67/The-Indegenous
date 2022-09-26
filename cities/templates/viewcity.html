@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{%block cssfile%}
+    <link rel="stylesheet" href= {% static 'viewcity.css' %}>
+{% endblock %}
+{% block content %}
+
+    <div id = ''>
+        <br>
+            <h1>What City is in Your Mind, Lets read about it!</h1>
+        <br>
+        <br>
+        <div class = 'boxes'>
+            {% for city in list %}
+                <div class = div-card>
+                    <div style="align-items: center; align-content:center;">
+                        <img id ="photu1" src={% static "A.jpeg" %} alt="City Photo">
+                    </div>
+                    <br>
+                    <h1 style="font-size: 30px; color:rgb(17, 17, 32)">{{city.name}}</h1>
+                    <br> 
+                    <div style="display:flex; flex-wrap: wrap; align-content: center; justify-content: center;">
+                        <div class="feature">Geography
+                            <span class="featuretext">{{city.geography}}</span>
+                        </div>
+                        <div class="feature">History
+                            <span class="featuretext">{{city.history}}</span>
+                        </div>
+                        <div class="feature">Culture
+                            <span class="featuretext">{{city.culture}}</span>
+                        </div>
+                        <div class="feature">Language
+                            <span class="featuretext">{{city.language}}</span>
+                        </div>
+                        <div class="feature">Infrastructure
+                            <span class="featuretext">{{city.infrastructure}}</span>
+                        </div>
+                        <div class="feature">Tourist Spots
+                            <span class="featuretext">{{city.tourist_spots}}</span>
+                        </div>
+                    </div>
+                    
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <!-- <script>    
+        th = document.querySelectorAll('th')
+        th.forEach(t => {
+            let innerHtml = t.innerHTML
+            t.addEventListener("mouseover", (e) => {
+                t.innerHTML = "DATA DATA DATA DATADATA DATADATA DATADATA DATADATA DATADATA DATADATA DATADATA DATA"                
+                // t.style.width = '200%'
+            });
+
+            t.addEventListener('mouseout', (e) => {
+                while (t.children.length) {
+                    t.removeChild(t.lastChild)
+                }
+
+                // t.style.width = '50%'
+
+                t.innerHTML = innerHtml
+
+                console.log('removed children')
+                // t.innerHTML = ''
+            })
+        });
+    </script> -->
+{% endblock %}

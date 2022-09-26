@@ -1,0 +1,100 @@
+table {
+    border: 1px solid black;
+}
+
+th {
+    transition: all 0.5s;
+}
+
+.div-card {
+    color: Black;
+    background-color: #85a5b9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap  ;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center ;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+p {
+    word-wrap: normal;
+}
+
+
+th:hover {
+    color:black;
+    background-color: #8FBC8F;
+}
+body{
+    font-size: 25px;
+    background-image: url('x2.jpg');
+    background-size: 100%;
+    background-repeat: repeat;
+    text-align: center;
+}
+.feature {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: #8FBC8F;
+    color: black;
+    padding: 10px;
+
+  }
+#photu1{
+    width: 10%;
+    height: 20%;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     
+}
+  
+  .feature .featuretext {
+    visibility: hidden;
+    width: 120%;
+    margin-top: 20px;
+    background-color: black;
+    color: rgb(9, 9, 9);
+    border-radius: 10px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: -60%;
+    /* margin-left: -10px; */
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .feature:hover {
+    background-color: #c4c073;
+  }
+  .feature:hover .featuretext {
+    visibility: visible;
+    opacity: 1;
+    margin: 10px;
+    width: 500px;
+    background-color:#668f55;
+    text-align: left;
+    padding: 10px;
+    border: solid black 2px;
+  }

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href= {% static 'signup.css' %} >
+    <br>
+    <div id='signup-page'>
+        <div id="signup-border" style="display: flex; align-items: center; justify-content: center;">
+            <form action="signup" method='POST' id = 'cssform'> {% csrf_token %}
+                <label for="Name" > User Name -: </label>
+                <input type="text" id="username" name="username"> <br>
+                <label for="fname"> First Name -: </label>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname"> Last Name -: </label>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="Name"> Email Address -: </label>
+                <input type="email" id="email" name="email"><br>
+                <label for="pass1"> Password -: </label>
+                <input type="password" id="Password" name="pass1"><br>
+
+                <input type="submit" name="" id="btn">
+            </form>
+        </div>
+    </div>
+{% endblock %}

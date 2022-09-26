@@ -1,0 +1,18 @@
+{% load static %}
+<link rel="stylesheet" href={% static "navbar.css" %}>
+<div id='navbar'>
+    <!-- <img id='leaf' onclick='window.open("/","_self")' src={% static 'images/pngwing.com.png'%} alt="Home"> -->
+    {%if user.get_username %}
+    
+    {%else%}
+        <a id="about_us" href="/signup"> Sign Up </a>
+    {%endif%}
+    
+    <a id="all_blogs" href="/cities">Read Blogs</a>
+    <a id="post_blog" href="/postcity">Post Blog</a>
+    {% if user.get_username%}
+        <a id="profile_us" href="/signout"> {{user.get_username}} </a>
+    {% else%}
+        <a id="profile_us" href="/signin" > Login </a>
+    {% endif %}
+</div>  
